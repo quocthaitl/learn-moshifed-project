@@ -197,15 +197,15 @@ a {
 /* Button */
 
 .btn {
-  text-transform: uppercase;
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
   font-size: 1.8rem;
   font-weight: 600;
-  padding: 2rem 4rem;
   margin: 1rem 0;
-  border: 0;
-  border-radius: 4rem;
-  cursor: pointer;
+  padding: 2rem 3rem;
   text-align: center;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
@@ -215,7 +215,7 @@ a {
 
 .btn--primary {
   color: white;
-  background: var(--color-primary)
+  background: var(--color-primary);
 }
 
 .btn--primary:hover {
@@ -224,13 +224,12 @@ a {
 
 .btn--secondary {
   color: white;
-  background: var(--color-secondary)
+  background: var(--color-secondary);
 }
 
 .btn--secondary:hover {
   background: #05cdf0;
 }
-
 
 .btn--accent {
   color: white;
@@ -254,6 +253,27 @@ a {
 
 @media screen and (min-width: 1024px) {
   .btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* Input */
+
+.input {
+  border-radius: 3rem;
+  border: 1px solid #ccc;
+  color: var(--color-heading);
+  font-size: 2rem;
+  outline: none;
+  padding: 1.5rem 3.5rem;
+}
+
+.input::placeholder {
+  color: #cdcbd7;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
     font-size: 1.5rem;
   }
 }
