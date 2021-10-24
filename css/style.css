@@ -34,7 +34,6 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--color-heading);
   margin-bottom: 1rem;
 }
 
@@ -296,4 +295,33 @@ a {
 
 .input-group .btn {
   margin: 4px;
+}
+
+/* Card */
+
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+
+.card--primary .card__header {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.card--secondary .card__header {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.card__title,
+.card__body {
+  margin-top: 0;
+  padding: 2rem 3rem;
+  font-size: 2.4rem;
+}
+
+.card__body {
+  color: var(--color-heading);
 }
