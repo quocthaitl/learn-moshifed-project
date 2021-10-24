@@ -382,3 +382,39 @@ a {
 .plan .list__item {
   margin-bottom: 2rem;
 }
+
+@media screen and (min-width: 1024px) {
+  .plan__title {
+    font-size: 1.4rem;
+  }
+
+  .plan__price {
+    font-size: 5rem;
+  }
+
+  .plan__cycle {
+    font-size: 1.6rem;
+  }
+
+  .plan__tagline {
+    font-size: 1.7rem;
+  }
+}
+
+/* Media */
+
+.media {
+  display: flex;
+}
+
+.media .icon {
+  margin-top: 1rem;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+
+.media__title {
+  margin-top: 0;
+}
