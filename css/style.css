@@ -197,6 +197,16 @@ a {
   fill: var(--color-primary);
 }
 
+.icon--white {
+  fill: white;
+}
+
+.icon-container--accent-big {
+  height: 96px;
+  width: 96px;
+  background: var(--color-accent);
+}
+
 /* Button */
 
 .btn {
@@ -252,6 +262,10 @@ a {
 .btn--outline:hover {
   color: white;
   background: var(--color-heading);
+}
+
+.btn--stretched {
+  padding: 2rem 6rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -450,7 +464,7 @@ a {
   opacity: 0.4;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .quote__body {
     font-size: 2rem;
   }
@@ -463,4 +477,149 @@ a {
   .quote__image {
     top: 0;
   }
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonial */
+
+.testimonial .grid {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  position: relative;
+  margin: 0 3rem;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 20px;
+  right: -48px;
+}
+
+.testimonial__content {
+  margin: 6rem 0 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .grid--1x2 {
+    grid-template-columns: auto 1fr;
+  }
+
+  .testimonial__image {
+    margin: 0;
+  }
+
+  .testimonial__content {
+    margin-left: 6rem;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .testimonial__content .quote__body {
+    font-size: 2.4rem;
+  }
+}
+
+/* Callout */
+
+.callout {
+  border-radius: 5px;
+  padding: 4rem;
+}
+
+.callout--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+.callout__title {
+  font-size: 3rem;
+  color: white;
+  margin-top: 0;
+}
+
+.callout__text {
+  color: white;
+}
+
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__text {
+    font-size: 1.8rem;
+  }
+
+  .callout .btn {
+    margin: 0 2rem;
+  }
+}
+
+/* Collapsible */
+
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__title {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.collapsible__item {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0deg);
+}
+
+.collapsible--expanded .collapsible__item {
+  max-height: 100vh;
+  opacity: 1;
 }
