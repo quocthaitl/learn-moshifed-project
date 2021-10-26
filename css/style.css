@@ -109,7 +109,6 @@ a {
 /* Badge */
 
 .badge {
-  text-transform: capitalize;
   font-size: 2rem;
   padding: 0.5rem 2rem;
   border-radius: 2rem;
@@ -221,6 +220,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+  max-height: 60px;
 }
 
 .btn--block {
@@ -284,6 +284,7 @@ a {
   font-size: 2rem;
   outline: none;
   padding: 1.5rem 3.5rem;
+  min-width: 0;
 }
 
 ::placeholder {
@@ -307,7 +308,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -631,6 +632,7 @@ a {
 .block {
   text-align: center;
   color: #7b858b;
+  padding: var(--padding-vertical) 2rem;
 }
 
 .container {
@@ -640,7 +642,6 @@ a {
 
 .block--dark {
   background: black;
-  padding: var(--padding-vertical) 2rem;
 }
 
 .block--dark .block__title {
@@ -736,6 +737,7 @@ a {
   margin-top: 0;
   line-height: 1.1;
   color: white;
+  font-size: 6rem;
 }
 
 .hero__text {
@@ -757,5 +759,42 @@ a {
   }
   .hero__heading {
     align-self: center;
+  }
+  .hero__title {
+    font-size: 7rem;
+  }
+}
+
+/* Domain */
+
+.domain .input-group {
+  margin: 4rem auto;
+  max-width: 670px;
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+}
+
+.btn__domain .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.domain .grid {
+  grid-template-rows: repeat(2, 6rem);
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 700px;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.domain .list__item {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .domain .grid {
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
   }
 }
