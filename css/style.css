@@ -755,4 +755,7 @@ a {
     padding-top: 0;
     text-align: left;
   }
+  .hero__heading {
+    align-self: center;
+  }
 }
