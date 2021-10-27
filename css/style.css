@@ -792,7 +792,7 @@ a {
   border: 0;
 }
 
-.btn__domain .icon {
+.domain .icon {
   width: 20px;
   height: 20px;
   margin-right: 1rem;
@@ -821,8 +821,33 @@ a {
 
 .plan-block {
   text-align: left;
+  padding-top: 0;
 }
 
 .plan-block .grid {
   gap: 6rem 4rem;
+}
+
+/* Feature block */
+
+.feature {
+  gap: 4rem;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 6rem;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+.feature-block .block__heading {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-child(even) .feature__content {
+    order: 2;
+  }
 }
