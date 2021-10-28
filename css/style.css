@@ -116,7 +116,6 @@ a {
   font-size: 2rem;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
-  font-weight: 2rem;
   white-space: nowrap;
 }
 
@@ -227,7 +226,7 @@ a {
   max-height: 60px;
 }
 
-.btn-- {
+.btn--block {
   width: 100%;
 }
 
@@ -288,7 +287,6 @@ a {
   font-size: 2rem;
   outline: none;
   padding: 1.5rem 3.5rem;
-  min-width: 0;
 }
 
 ::placeholder {
@@ -312,11 +310,13 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1.5rem;
+  min-width: 0;
 }
 
 .input-group .btn {
   margin: 4px;
+  padding: 1.25rem 3vw;
 }
 
 /* Card */
@@ -381,7 +381,9 @@ a {
 }
 
 .plan__badge {
+  display: inline-block;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .card--primary .plan__badge {
@@ -462,7 +464,7 @@ a {
 /* Quote */
 
 .quote__body {
-  font-size: 3rem;
+  font-size: 2.4rem;
   color: var(--color-body-darker);
   font-style: italic;
   line-height: 1.3;
@@ -676,12 +678,12 @@ a {
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 6rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 6rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 
 .block__heading {
@@ -759,6 +761,10 @@ a {
 
 /* Hero */
 
+.hero {
+  text-align: center;
+}
+
 .hero__title {
   margin-top: 0;
   line-height: 1.1;
@@ -803,20 +809,23 @@ a {
 .domain .icon {
   width: 20px;
   height: 20px;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   vertical-align: middle;
 }
 
 .domain .grid {
   grid-template-rows: repeat(2, 6rem);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   max-width: 700px;
   font-size: 2rem;
   margin: 0 auto;
 }
 
 .domain .list__item {
+  padding: 0;
   margin-right: 0;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -834,6 +843,10 @@ a {
 
 .plan-block .grid {
   gap: 6rem 4rem;
+}
+
+.plan-block .btn {
+  width: 100%;
 }
 
 /* Feature block */
@@ -905,10 +918,25 @@ a {
 
 /* Testimonial block */
 
+.testimonial-block {
+  padding-bottom: 0;
+}
+
+/* Callout block */
+
+.callout-block {
+  padding-top: 0;
+}
+
+.callout-block .callout {
+  transform: translateY(10rem);
+}
+
 /* Footer */
 
 .footer {
   background: #232323;
+  padding-top: 10rem;
 }
 
 .footer .grid {
@@ -943,7 +971,7 @@ a {
   margin-top: 2rem;
   font-size: 2.1rem;
   color: white;
-  opacity: 0.3
+  opacity: 0.3;
 }
 
 .footer a {
